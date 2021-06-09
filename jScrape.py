@@ -16,7 +16,7 @@ from urllib.parse import urlparse
 # [x] 2b         if it does not begin with "https://", treat it as local and append targ domain"
 # [ ] 2.1           - may want to have some level of validation + error reporting, to identify if
 #                     any number of items were not pulled successfully after setting to local dom
-# [ ] 3    + review for specific items:
+# [x] 3    + review for specific items:
 #           :: keys, 'admin', software/versions, private IPs, URLs,
 #           :: decoding mechanisms, etc.
 #########################################
@@ -110,7 +110,7 @@ def makeFullLocalURL():
 
 #  3  #
 possibleFinding = []
-def testScriptSearch():
+def scriptSearch():
   global match
   match = 0
   print()
@@ -124,12 +124,10 @@ def testScriptSearch():
     except requests.exceptions.ConnectionError as exc:
       print(exc)
 
-#    patterns = ['admin', 'captureDocumentDownload', 'capturePageVisit', 'PseudO']
     for pattern in patterns:
       if re.search(pattern, text, re.IGNORECASE):
         print('* MATCH!  ' + '\033[32m' + pattern + '\033[0m  \033[3mfound in:  \033[0m\033[4m' + f + '\033[0m')
         match += 1
-#    exit()
 
 def matchCount():
   print('Total match count:  ' + str(match))
@@ -145,5 +143,5 @@ print()
 printInt()
 print()
 makeFullLocalURL()
-testScriptSearch()
+scriptSearch()
 matchCount()
