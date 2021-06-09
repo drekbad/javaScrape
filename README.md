@@ -19,12 +19,9 @@ Upcoming change :
   
 ---------------------------------
 
-Usage: 
-
+Usage: \n
 ./jScrape -u https://www.iana.org/domains/reserved
-
- 
-Example Output:
-
+\n 
+Example Output:\n
 ![screen](https://user-images.githubusercontent.com/85598459/121372915-a3cf6280-c90c-11eb-9272-ea45c4456681.png)
 
