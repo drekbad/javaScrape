@@ -56,7 +56,7 @@ if "https" in targURL:
 elif "http" in targURL:
   protocol = "http://"
 else:
-  protocol = "https://"
+  protocol = "https://" # user input without protocol supplied gets designation from all 3 IF conditions, but appending it as part of targURL screws up others to beco>
 
 #  2  #
 soup = BeautifulSoup(requests.get(targURL).content, 'html.parser')
