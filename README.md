@@ -22,8 +22,8 @@ Setup:<br>
 pip install -r requirements.txt
 
 
-Usage:
- 
+
+Usage:<br>
 ./jScrape -u https://www.iana.org/domains/reserved
 
  
