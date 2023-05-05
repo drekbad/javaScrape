@@ -18,6 +18,9 @@ Upcoming change :
   > Take input args or file to receive custom patterns.
   
 ---------------------------------
+Setup:
+pip install -r requirements.txt
+
 
 Usage:
  
